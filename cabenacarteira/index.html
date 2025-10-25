@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CABENACARTEIRA - Google Ads Premium</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+    }
+
+    body {
+      background-color: #fff;
+      color: #333;
+    }
+
+    header {
+      background-color: #d60000;
+      color: #fff;
+      padding: 15px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    header h1 {
+      font-size: 1.8rem;
+      letter-spacing: 1px;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    .hero {
+      background: linear-gradient(to right, #d60000, #ff3b3b);
+      color: white;
+      text-align: center;
+      padding: 100px 20px;
+    }
+
+    .hero h2 {
+      font-size: 2.5rem;
+      margin-bottom: 15px;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      margin-bottom: 25px;
+    }
+
+    .hero button {
+      background-color: white;
+      color: #d60000;
+      border: none;
+      padding: 12px 25px;
+      font-size: 1rem;
+      font-weight: bold;
+      cursor: pointer;
+      border-radius: 5px;
+      transition: 0.3s;
+    }
+
+    .hero button:hover {
+      background-color: #ffeaea;
+    }
+
+    .products {
+      padding: 60px 40px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+    }
+
+    .product {
+      border: 2px solid #ffcccc;
+      border-radius: 10px;
+      text-align: center;
+      padding: 20px;
+      transition: transform 0.3s;
+    }
+
+    .product:hover {
+      transform: scale(1.05);
+    }
+
+    .product img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+
+    .product h3 {
+      margin-top: 15px;
+      color: #d60000;
+    }
+
+    .product button {
+      margin-top: 10px;
+      background-color: #d60000;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .product button:hover {
+      background-color: #ff3b3b;
+    }
+
+    .contact, .login {
+      padding: 60px 40px;
+      background-color: #ffeaea;
+    }
+
+    form {
+      max-width: 500px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    form input, form textarea {
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    form button {
+      background-color: #d60000;
+      color: white;
+      border: none;
+      padding: 12px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    form button:hover {
+      background-color: #ff3b3b;
+    }
+
+    footer {
+      background-color: #d60000;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>CABENACARTEIRA</h1>
+    <nav>
+      <a href="#produtos">Produtos</a>
+      <a href="#contato">Contato</a>
+      <a href="#login">Login</a>
+      <a href="#carrinho">Carrinho</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h2>Invista no seu sucesso com Google Ads!</h2>
+    <p>Aumente suas vendas e alcance mais clientes com nossos serviços premium de campanhas otimizadas.</p>
+    <button>Ver Ofertas</button>
+  </section>
+
+  <section id="produtos" class="products">
+    <div class="product">
+      <img src="https://source.unsplash.com/600x400/?ads,marketing" alt="Google Ads Básico">
+      <h3>Plano Básico</h3>
+      <p>Ideal para iniciantes — campanhas simples e eficazes.</p>
+      <button onclick="addToCart('Plano Básico')">Adicionar ao Carrinho</button>
+    </div>
+
+    <div class="product">
+      <img src="https://source.unsplash.com/600x400/?analytics,google" alt="Google Ads Avançado">
+      <h3>Plano Avançado</h3>
+      <p>Campanhas otimizadas com análise detalhada de desempenho.</p>
+      <button onclick="addToCart('Plano Avançado')">Adicionar ao Carrinho</button>
+    </div>
+
+    <div class="product">
+      <img src="https://source.unsplash.com/600x400/?seo,ppc" alt="Google Ads Premium">
+      <h3>Plano Premium</h3>
+      <p>Gestão completa e suporte personalizado para sua marca.</p>
+      <button onclick="addToCart('Plano Premium')">Adicionar ao Carrinho</button>
+    </div>
+  </section>
+
+  <section id="contato" class="contact">
+    <h2 style="text-align:center; color:#d60000;">Entre em Contato</h2>
+    <form id="contactForm">
+      <input type="text" placeholder="Seu nome" required>
+      <input type="email" placeholder="Seu e-mail" required>
+      <textarea rows="5" placeholder="Sua mensagem..." required></textarea>
+      <button type="submit">Enviar Mensagem</button>
+    </form>
+  </section>
+
+  <section id="login" class="login">
+    <h2 style="text-align:center; color:#d60000;">Área de Login</h2>
+    <form id="loginForm">
+      <input type="text" placeholder="Usuário" required>
+      <input type="password" placeholder="Senha" required>
+      <button type="submit">Entrar</button>
+    </form>
+  </section>
+
+  <section id="carrinho" class="contact">
+    <h2 style="text-align:center; color:#d60000;">Seu Carrinho</h2>
+    <ul id="cartList" style="list-style:none; text-align:center; margin-top:20px;"></ul>
+  </section>
+
+  <footer>
+    <p>© 2025 CABENACARTEIRA — Todos os direitos reservados.</p>
+  </footer>
+
+  <script>
+    const cart = [];
+    const cartList = document.getElementById("cartList");
+
+    function addToCart(product) {
+      cart.push(product);
+      renderCart();
+      alert(product + " foi adicionado ao carrinho!");
+    }
+
+    function renderCart() {
+      cartList.innerHTML = "";
+      if (cart.length === 0) {
+        cartList.innerHTML = "<li>Seu carrinho está vazio.</li>";
+      } else {
+        cart.forEach((item, index) => {
+          const li = document.createElement("li");
+          li.textContent = item + " ";
+          const removeBtn = document.createElement("button");
+          removeBtn.textContent = "Remover";
+          removeBtn.style.marginLeft = "10px";
+          removeBtn.onclick = () => {
+            cart.splice(index, 1);
+            renderCart();
+          };
+          li.appendChild(removeBtn);
+          cartList.appendChild(li);
+        });
+      }
+    }
+
+    document.getElementById("contactForm").onsubmit = (e) => {
+      e.preventDefault();
+      alert("Mensagem enviada! Entraremos em contato em breve.");
+      e.target.reset();
+    };
+
+    document.getElementById("loginForm").onsubmit = (e) => {
+      e.preventDefault();
+      alert("Login simulado com sucesso!");
+      e.target.reset();
+    };
+  </script>
+</body>
+</html>
